@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Virtina
+ * @package    Virtina_Categorysidebar
+ * @copyright  Copyright (c) 2015-2016 Virtina. (http://www.virtina.com)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+-->
+<config>
+    <tabs>
+        <virtina_extensions translate="label" module="categorysidebar">
+            <label>Virtina Extensions</label>
+            <sort_order>100</sort_order>
+        </virtina_extensions>
+    </tabs>
+    <sections>
+        <categorysidebar>
+            <label>Category Sidebar Navigation</label>
+            <tab>virtina_extensions</tab>
+            <sort_order>1000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <general translate="label" module="categorysidebar">
+                    <label>General</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <include_jquery translate="label">
+                            <label>Include jQuery Library </label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </include_jquery>						
+                        <enable translate="label">
+                            <label>Enable Sidebar Navigation </label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enable>
+                        <title translate="label">
+                            <label>Set Title For Category Sidebar Navigation </label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </title>
+                        <column translate="label">
+                            <label>Default Column</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>categorysidebar/system_config_source_dropdown_values</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </column>                        
+                        <iconimg translate="label">
+                            <label>Enable Icon Image For Navigation Menu</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </iconimg>
+                    </fields>
+                </general>                            
+            </groups>
+        </categorysidebar>
+    </sections>
+</config>

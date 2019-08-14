@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<!--
+ * Virtina
+ * @package    Virtina_Categorysidebar
+ * @copyright  Copyright (c) 2015-2016 Virtina. (http://www.virtina.com)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+-->
+<config>
+    <modules>
+        <Virtina_Categorysidebar>
+            <version>0.0.1</version>
+        </Virtina_Categorysidebar>
+    </modules>
+    <frontend>
+        <routers>
+            <categorysidebar>
+                <use>standard</use>
+                <args>
+                    <module>Virtina_Categorysidebar</module>
+                    <frontName>categorysidebar</frontName>
+                </args>
+            </categorysidebar>
+        </routers>
+        <layout>
+            <updates>
+                <categorysidebar>
+                    <file>categorysidebar.xml</file>
+                </categorysidebar>
+            </updates>
+        </layout>
+		<events>
+			<controller_action_layout_load_before>
+				<observers>
+					<categorysidebar>
+						<class>Virtina_Categorysidebar_Model_Observer</class>
+						<method>addAttributeSetHandle</method>
+					</categorysidebar>
+				</observers>
+            </controller_action_layout_load_before>
+        </events>		
+    </frontend> 
+    <global>
+        <models>
+            <categorysidebar>
+                <class>Virtina_Categorysidebar_Model</class>
+                <resourceModel>categorysidebar_mysql4</resourceModel>
+            </categorysidebar>           
+            <categorysidebar_mysql4>
+                <class>Virtina_Categorysidebar_Model_Mysql4</class>
+                <entities>
+                    <categorysidebar>
+                        <table>categorysidebar</table>
+                    </categorysidebar>                 
+                </entities>
+            </categorysidebar_mysql4>
+        </models>
+        <helpers>
+            <categorysidebar>
+                <class>Virtina_Categorysidebar_Helper</class>
+            </categorysidebar>
+        </helpers>        
+        <resources>
+            <categorysidebar_setup>
+                <setup>
+                    <module>Virtina_Categorysidebar</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </categorysidebar_setup>
+            <categorysidebar_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </categorysidebar_write>
+            <categorysidebar_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </categorysidebar_read>
+        </resources>
+        <blocks>
+            <categorysidebar>
+                <class>Virtina_Categorysidebar_Block</class>
+            </categorysidebar>
+            <catalog>
+				<rewrite>
+				  <categorysidebar>Virtina_Categorysidebar_Block_Categorysidebar</categorysidebar>
+				</rewrite>
+			</catalog>									
+        </blocks>
+    </global>
+</config>

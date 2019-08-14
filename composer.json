@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/Virtina_Categorysidebar",
+    "type": "magento-module",
+    "license": "OSL-3.0",
+    "homepage": "",
+    "description": "Virtina brings you 'Category Sidebar Navigation' extension that provides you an efficient method to customize traditional category sidebar.",
+    "authors": [
+    {
+        "name": "Virtina",
+        "email": "gigijk@virtina.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
